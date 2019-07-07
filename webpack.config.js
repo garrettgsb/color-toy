@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+const webpack = require('webpack'); // eslint-disable-line no-unused-vars
 const path = require('path');
 
 const config = {
@@ -6,16 +6,16 @@ const config = {
   entry: './src/index.tsx',
   output: {
     filename: 'build.js',
-    path: __dirname,
+    path: __dirname + '/public',
     publicPath: '/public/',
   },
   devServer: {
-    contentBase: path.resolve(__dirname, '.')
+    contentBase: path.resolve(__dirname, '.'),
   },
   devtool: "source-map",
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
   },
   module: {
     rules: [
@@ -27,10 +27,10 @@ const config = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-        }
+        },
       },
-      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
-    ]
+      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+    ],
   },
 };
 

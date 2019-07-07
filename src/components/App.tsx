@@ -82,10 +82,10 @@ class App extends React.Component <any, any> {
       <main className='background' style={{ backgroundColor: fullColor }}>
         <main className='content'>
           <h1>
-          <span style={{ color: fullColor }}>#</span>
-          <span ref={this.red} contentEditable onKeyDown={event => { this.handleEdit(event, 'red') }} style={{ color: redColor }}>{red}</span>
-          <span ref={this.green} contentEditable onKeyDown={event => { this.handleEdit(event, 'green') }} style={{ color: greenColor }}>{green}</span>
-          <span ref={this.blue} contentEditable onKeyDown={event => { this.handleEdit(event, 'blue') }} style={{ color: blueColor }}>{blue}</span>
+            <span style={{ color: fullColor }}>#</span>
+            <span ref={this.red} contentEditable onKeyDown={event => { this.handleEdit(event, 'red') }} style={{ color: redColor }}>{red}</span>
+            <span ref={this.green} contentEditable onKeyDown={event => { this.handleEdit(event, 'green') }} style={{ color: greenColor }}>{green}</span>
+            <span ref={this.blue} contentEditable onKeyDown={event => { this.handleEdit(event, 'blue') }} style={{ color: blueColor }}>{blue}</span>
           </h1>
           <div className="color-controls">
             <figure>
